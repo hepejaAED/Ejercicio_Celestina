@@ -1,0 +1,21 @@
+---
+title: "La Celestina"
+author: "Javier Herrero Pérez"
+date: "2025-10-22"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#
+
+```{r}
+rm(list=ls())
+```
+
+```{r}
+celestina<-readLines("data/LaCelestina.txt")
+```
+
