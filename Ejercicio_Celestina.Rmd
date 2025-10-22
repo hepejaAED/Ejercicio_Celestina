@@ -17,5 +17,32 @@ rm(list=ls())
 
 ```{r}
 celestina<-readLines("data/LaCelestina.txt")
+celestina <- celestina[265:length(celestina)]
+```
+
+```{r}
+texto<-gsub('[^a-záéíóúñ]', " ",texto)
+texto<-gsub("()]","",texto)
+texto <- paste(celestina, collapse = " ")
+texto<-tolower(texto)
+palabras <- unlist(strsplit(texto, " "))
+
+palabras <- palabras[palabras != ""]
+# palabras
+```
+
+
+
+```{r}
+frecuencias <- table(palabras)
+palabra_mas_repetida <- names(frecuencias)[which.max(frecuencias)]
+max_reps <- max(frecuencias)
+palabra_mas_repetida
+```
+```{r}
+vocales <- unlist(strsplit(texto, ""))
+solo_vocales <- grep("[aeiouáéíóúü]", vocales, value = TRUE)
+freq_vocales <- sort(table(solo_vocales), decreasing = TRUE)
+freq_vocales[1]
 ```
 
