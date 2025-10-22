@@ -45,4 +45,10 @@ solo_vocales <- grep("[aeiouáéíóúü]", vocales, value = TRUE)
 freq_vocales <- sort(table(solo_vocales), decreasing = TRUE)
 freq_vocales[1]
 ```
+```{r}
+calisto <- length(grep("calisto", palabras))
+calisto
+melibea <- length(grep("melibea", palabras))
+melibea
+```
 
